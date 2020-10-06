@@ -10,7 +10,7 @@ def get_file_lines(filename):
 
     
     for x in range(len(poem_lines_dictionary)):
-        print(poem_lines_dictionary[x])
+        #print(poem_lines_dictionary[x])
         line_list.append(poem_lines_dictionary[x])
     
     return line_list
@@ -22,6 +22,7 @@ def lines_printed_backwards(lines_list):
     for x in reversed(range(len(lines_list))):
         print(str(x + 1) + " " + line_list[x])
 
+print("\nBACKWARDS POEM:\n")
 lines_printed_backwards(line_list)
 
 def lines_printed_random(lines_list):
@@ -33,7 +34,22 @@ def lines_printed_random(lines_list):
         print(str(counter[randomNumber] + 1) + " " + lines_list[counter[randomNumber]])
         counter.pop(randomNumber)
 
+print("\nRANDOM POEM:\n")
 lines_printed_random(line_list)
+
+def lines_printed_custom(lines_list):
+    #odds first evens second
+
+    for x in range(len(lines_list)):
+        if x%2==0:
+            print(str(x+1) + " " + lines_list[x])
+    for x in range(len(lines_list)):
+        if x%2!=0:
+            print(str(x+1) + " " + lines_list[x])
+
+print("\nODDS AND EVENS POEM: \n")
+lines_printed_custom(line_list)
+
         
 
 
