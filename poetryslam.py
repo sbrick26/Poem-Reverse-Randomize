@@ -5,10 +5,13 @@ def get_file_lines(filename):
 
     for x in range(len(file_lines)):
         poem_lines_dictionary[x] = file_lines[x]
-    
-    poem_lines = poem_lines_dictionary.values()
-    return(poem_lines)
 
-print(get_file_lines("poem.txt"))
+    line_list = []
+    for x in range(len(poem_lines_dictionary)):
+        print(poem_lines_dictionary[x])
 
-    
+
+get_file_lines("poem.txt")
+
+
+
