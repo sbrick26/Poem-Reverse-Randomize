@@ -1,3 +1,4 @@
+import random
 line_list = []
 def get_file_lines(filename):
     file_lines = open(filename, "r").readlines()
@@ -27,8 +28,14 @@ def lines_printed_random(lines_list):
     counter = []
     for x in range(len(lines_list)):
         counter.append(x)
-    for x in reversed(range(len(lines_list))):
+    for x in range(len(lines_list)):
+        randomNumber = random.randint(0, len(counter) - 1)
+        print(str(counter[randomNumber] + 1) + " " + lines_list[counter[randomNumber]])
+        counter.pop(randomNumber)
+
+lines_printed_random(line_list)
         
+
 
 
 
